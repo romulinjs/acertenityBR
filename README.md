@@ -1,32 +1,44 @@
-# Aceternity UI Component Explorer
+# Aceternity UI Component Explorer (v2.0 Live Edition)
 
-Clone independente de exploração para o catálogo público de componentes Aceternity UI. A amostra traz **62 estudos de componentes/efeitos/blocos** e **8 templates**, organizados em coleções.
+Catálogo interativo de alta fidelidade para o ecossistema público de componentes **Aceternity UI**. Traz **62 estudos de componentes/efeitos/blocos** e **8 templates**, agora com correspondência real, física tátil, Canvas interativo e controles ao vivo.
 
-## Funcionalidades
+## O Que Foi Melhorado & Adicionado
 
-- Busca textual global com `⌘K`/`Ctrl+K`, pesquisa por tags, categoria e descrição, filtros, ordenação e coleções salvas no navegador.
-- Páginas individuais com preview, código TSX/CSS/uso em abas, copiar trecho e comando de instalação, link da referência e itens relacionados.
-- Demos que respondem a hover, clique, scroll ou arraste, entre elas aurora, feixes SVG, ripple, spotlight, grade selecionável, mega menu, texto animado, comparação, timeline, cards em perspectiva e prévias de templates.
-- Layout responsivo, modo de movimento reduzido e controle de movimento em demos.
-
-O clone usa conteúdo e código próprios, com links transparentes para as páginas de referência. A lista é representativa e não pretende reproduzir literalmente todas as entradas ou o código proprietário do site original.
+- **Demos com Correspondência Real**:
+  - **3D Card Effect**: Cálculo de inclinação em 3D real com `perspective(1000px)`, `rotateX`/`rotateY` e camadas elevadas em `translateZ`.
+  - **Vortex**: Canvas 2D animado com dezenas de partículas em espiral gravitacional que reagem ao mouse.
+  - **Wavy Background**: Ondas senoidais fluidas contínuas em Canvas 2D com gradientes dinâmicos.
+  - **Background Beams With Collision**: Feixes laser que descem e geram explosão de fagulhas e partículas na colisão.
+  - **Card Spotlight**: Halo de luz suave com máscara em grade de pontos que acompanha cirurgicamente o cursor.
+  - **Glare Card**: Efeito holográfico arco-íris iridescente reativo ao ângulo de visão.
+  - **Focus Cards**: Desfoque e escurecimento inteligente dos cartões vizinhos ao focar com o mouse.
+  - **Expandable Cards**: Expansão fluida de cards em modal com `framer-motion layoutId`.
+  - **Infinite Moving Cards**: Carrossel contínuo de depoimentos com pausa suave no hover e gradientes nas bordas.
+  - **Macbook Pro 3D**: Chassi do notebook com abertura de tela configurável e app interativo.
+  - **Lens**: Lupa com zoom real de 2.5x que amplia qualquer área inspecionada.
+  - **Animated Tooltip**: Avatares com tooltip que segue o ponteiro com física de mola e rotação orgânica.
+  - **3D Pin**: Pino suspenso no ar com feixe vertical de luz e anéis concêntricos de radar pulsante.
+  - **Moving Border**: Ponto luminoso em gradiente cônico que percorre o contorno do botão em loop contínuo.
+  - **Hero Highlight**: Marcador fluorescente gradiente animado que se desenha sobre o texto.
+  - **Wobble Card**: Amortecimento físico elástico com inércia reativa ao cursor.
+- **Playground Interativo nos Detalhes**:
+  - Seletor de esquema de cores (Violet, Cyan, Emerald, Amber, Rose) aplicado em tempo real aos componentes e canvas.
+  - Controle de velocidade da animação (0.5x, 1x, 2x).
+  - Campo para testar texto personalizado ao vivo em componentes de tipografia.
+- **Modo Cinema (Tela Cheia)**:
+  - Botão para expandir qualquer demonstração em imersão total com suporte a tecla `ESC`.
+- **Feedback Tátil & Efeitos Sonoros Sutis**:
+  - Sintetizador puro via Web Audio API (sem dependências externas) com botão de áudio On/Off na barra superior.
+- **Código de Produção**:
+  - Abas de código com TSX, CSS e Usage prontos para copiar e colar diretamente em projetos React / Next.js.
 
 ## Executar
 
 ```bash
-pnpm install --frozen-lockfile
+# Com npm ou pnpm
+npm run dev
+# ou
 pnpm dev
 ```
 
-Para compilar: `pnpm build`. O projeto usa React, TypeScript, Vite, Framer Motion, React Router e Lucide. O manifesto de rotas para a prévia está em `public/manus-routes.json`.
-
-## Estrutura
-
-- `src/data/catalog.ts`: dados do catálogo, coleções e snippets de código editáveis.
-- `src/data/templates.ts`: textos e estilos compartilhados pelos oito templates e por seus snippets.
-- `src/components/DemoPreview.tsx`: demos reutilizáveis de componentes e templates.
-- `src/components/CodeBlock.tsx`: abas, destaque de sintaxe e cópia de código.
-- `src/clipboard.ts`: cópia com fallback quando a Clipboard API não está disponível.
-- `src/App.tsx`: shell, navegação, pesquisa, filtros e páginas de detalhe.
-- `src/styles.css`: linguagem visual e responsividade.
-- `RESEARCH.md`: observações e fontes oficiais consultadas.
+Para compilar em produção: `npm run build` ou `pnpm build`.
