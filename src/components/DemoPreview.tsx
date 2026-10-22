@@ -25,6 +25,14 @@ import { Pin3DDemo } from './demos/Pin3DDemo'
 import { MovingBorderDemo } from './demos/MovingBorderDemo'
 import { HeroHighlightDemo } from './demos/HeroHighlightDemo'
 import { WobbleCardDemo } from './demos/WobbleCardDemo'
+import { LampDemo } from './demos/LampDemo'
+import { MeteorsDemo } from './demos/MeteorsDemo'
+import { SparklesDemo } from './demos/SparklesDemo'
+import { FollowingPointerDemo } from './demos/FollowingPointerDemo'
+import { AppleCarouselDemo } from './demos/AppleCarouselDemo'
+import { LinkPreviewDemo } from './demos/LinkPreviewDemo'
+import { ColourfulTextDemo } from './demos/ColourfulTextDemo'
+import { CanvasRevealDemo } from './demos/CanvasRevealDemo'
 
 type Props = {
   item: CatalogItem
@@ -167,6 +175,30 @@ export function DemoPreview({
 
     case 'wobble-card':
       return <WobbleCardDemo compact={compact} hue={hue} />
+
+    case 'lamp':
+      return <LampDemo compact={compact} hue={hue} />
+
+    case 'meteors':
+      return <MeteorsDemo compact={compact} hue={hue} />
+
+    case 'sparkles':
+      return <SparklesDemo compact={compact} hue={hue} />
+
+    case 'following-pointer':
+      return <FollowingPointerDemo compact={compact} hue={hue} />
+
+    case 'apple-carousel':
+      return <AppleCarouselDemo compact={compact} />
+
+    case 'link-preview':
+      return <LinkPreviewDemo compact={compact} />
+
+    case 'colourful-text':
+      return <ColourfulTextDemo compact={compact} customText={customText} />
+
+    case 'canvas-reveal':
+      return <CanvasRevealDemo compact={compact} hue={hue} />
 
     // 2. Demos Nativas Refinadas
     case 'aurora':
