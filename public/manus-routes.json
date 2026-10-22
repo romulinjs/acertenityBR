@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"Component Explorer"},{"path":"/components/:slug","title":"Component detail"},{"path":"/templates/:slug","title":"Template detail"}]}
